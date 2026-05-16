@@ -1,6 +1,20 @@
 # Smart Leads Dashboard
 
-A full-stack Lead Management Dashboard built with the MERN stack using clean architecture, scalable code practices, and a professional user experience.
+A full-stack Lead Management Dashboard built with the MERN stack using clean architecture, scalable code practices, and a professional user experience. 
+
+🚀 **Live Demo:** [https://smart-leads-dashboard.vercel.app](https://smart-leads-dashboard.vercel.app) *(Replace with your actual Vercel link once deployed!)*
+
+---
+
+## 📸 Screenshots
+
+*(Add your screenshots here! Create a `docs` folder and upload `dashboard.png` and `modal.png`)*
+
+| Dashboard Analytics | Lead Management Modal |
+| :---: | :---: |
+| ![Dashboard Preview](./docs/dashboard.png) | ![Lead Modal](./docs/modal.png) |
+
+---
 
 ## Features
 
@@ -11,9 +25,10 @@ A full-stack Lead Management Dashboard built with the MERN stack using clean arc
 *   **Leads Management (CRUD)**: Create, Read, Update, and Delete leads.
 *   **Advanced Filtering & Search**: Filter by status and source, and perform debounced searches by name or email.
 *   **Server-Side Pagination**: Efficient data loading with skip and limit.
+*   **MongoDB Aggregation**: Uses the `$aggregate` pipeline for instant, highly scalable dashboard statistics.
 *   **CSV Export**: Export filtered lead data to CSV format.
 *   **Modern UI/UX**: Built with React, TailwindCSS, and Framer Motion for a responsive, dark-mode glassmorphism design.
-*   **Dockerized**: Easy setup for local development using Docker Compose.
+*   **Dockerized**: Production-ready Nginx multi-stage build and local development via Docker Compose.
 
 ## Tech Stack
 
@@ -24,7 +39,6 @@ A full-stack Lead Management Dashboard built with the MERN stack using clean arc
 ## Getting Started (Local Development)
 
 ### Prerequisites
-
 *   Node.js (v18+)
 *   Docker & Docker Compose (optional, for local DB/services)
 *   MongoDB Atlas URI (if not using Docker)
@@ -33,8 +47,8 @@ A full-stack Lead Management Dashboard built with the MERN stack using clean arc
 
 1.  **Clone the repository:**
     ```bash
-    git clone <repository-url>
-    cd <repository-directory>
+    git clone https://github.com/Abhimishra798/smart-leads-dashboard.git
+    cd smart-leads-dashboard
     ```
 
 2.  **Environment Variables:**
@@ -45,7 +59,7 @@ A full-stack Lead Management Dashboard built with the MERN stack using clean arc
 3.  **Running with Docker Compose (Recommended):**
     This will start the backend, frontend, and a local MongoDB instance.
     ```bash
-    docker-compose up --build
+    docker compose up --build
     ```
     *   Frontend will be available at `http://localhost:3000`
     *   Backend API will be available at `http://localhost:5000/api`
@@ -72,6 +86,7 @@ A full-stack Lead Management Dashboard built with the MERN stack using clean arc
 *   `GET /api/auth/me`: Get current user details (Protected).
 
 ### Leads
+*   `GET /api/leads/stats`: Get dashboard aggregation analytics (Protected, RBAC applied).
 *   `GET /api/leads`: Get paginated leads with optional filters (`status`, `source`, `search`, `sort`, `page`, `limit`). (Protected, RBAC applied).
 *   `POST /api/leads`: Create a new lead. (Protected).
 *   `GET /api/leads/:id`: Get a specific lead. (Protected, RBAC applied).
