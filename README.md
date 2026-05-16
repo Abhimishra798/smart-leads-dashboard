@@ -81,5 +81,5 @@ A full-stack Lead Management Dashboard built with the MERN stack using clean arc
 
 ## Submission Details
 
-*   **Developer**: Abhik (Replace with your actual name)
+*   **Developer**: Abhinav Mishra 
 *   **Email**: ritik.yadav@servicehive.tech (Submission Target)
