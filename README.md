@@ -2,7 +2,7 @@
 
 A full-stack Lead Management Dashboard built with the MERN stack using clean architecture, scalable code practices, and a professional user experience. 
 
-🚀 **Live Demo:** [https://smart-leads-dashboard.vercel.app](https://smart-leads-dashboard.vercel.app) *(Replace with your actual Vercel link once deployed!)*
+🚀 **Live Demo:** https://smart-leads-dashboard-virid.vercel.app
 
 ---
 
